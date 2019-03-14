@@ -55,5 +55,7 @@ for filename in os.listdir(folder):
 	    w= w+ (c/c1)
 	    total = total + c1
 	    count= count+c
+	path1= "bounding_box"
+	cv2.imwrite("face-" +  str(d-1) + ".jpg", bgr_img)
 final = abs(count-total)/total
 print("accuracy percentage: ", 100-final*100)
