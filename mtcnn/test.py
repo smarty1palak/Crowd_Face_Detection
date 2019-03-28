@@ -42,7 +42,7 @@ for filename in os.listdir(folder):
 	    for b in bounding_boxes:
 	        b = [int(round(value)) for value in b]
 	        cv2.rectangle(bgr_img, (b[0], b[1]), (b[2], b[3]), (0,255,0), 2)
-	        crop_img=bgr_img[b[1]:b[3],b[0]:b[2]]
+	        crop_img=bgr_img[b[1]+100:b[3]-100,b[0]-100:b[2]+100]
 	        #cv2.imwrite("face-" + str(d-1) + str(c) + ".jpg", crop_img)
 	        path = "cropped"
 	        cv2.imwrite(os.path.join(path , "image-" +str(d-1)+ "face-" +  str(c) + ".jpg"), crop_img)

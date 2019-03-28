@@ -9,8 +9,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument('--with_draw', help='do draw?', default='True')
 args = parser.parse_args()
 
-bgr_img = cv2.imread('test.jpg', 1)
-print (bgr_img.shape)
+bgr_img = cv2.imread('/home/palak/Face_Detection/mtcnn/test_images/test24.jpg', 1)
 
 ### detection
 list_time = []
@@ -29,7 +28,7 @@ if args.with_draw == 'True':
     for b in bounding_boxes:
         b = [int(round(value)) for value in b]
         cv2.rectangle(bgr_img, (b[0], b[1]), (b[2], b[3]), (0,255,0), 2)
-        crop_img=bgr_img[b[1]:b[3],b[0]:b[2]]
+        crop_img=bgr_img[b[1]-50:b[3]+50,b[0]-50:b[2]+50]
         cv2.imwrite("face-" + str(i) + ".jpg", crop_img)
         i+=1
 
