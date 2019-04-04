@@ -126,7 +126,7 @@ def draw_attributes(img_path, df):
 
 
 def main():
-    #perform_mtcnn_shits()
+    perform_mtcnn_shits()
     args = parser.parse_args()
     output_dir = args.output_dir
     input_dir = args.img_dir

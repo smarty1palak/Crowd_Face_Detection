@@ -11,3 +11,10 @@ Repository which contains work related to face detection in crowd
 
 python combined.py --img_dir cropped/ --output_dir results/ --model face_model.pkl
 
+#### accuracy
+
+1. Ethnicity classfier 94%
+2. Gender classifier 98%
+3. Face detection  Recall  91%
+				   Precision 98%
+
